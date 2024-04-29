@@ -1,0 +1,212 @@
+<html>
+    <head> <title>Class Activity 1</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+      
+        <style>
+
+            #storydiv { 
+                height: 100%;
+                position: relative;         
+              }
+                      
+            #storydiv p {
+                margin: 0;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+            }
+            
+            .maindiv{
+                border:5px ridge rgb(12, 96, 206);
+                margin:1%;
+                border-radius:20px
+            }
+
+            p{
+                font-size:30px;
+              
+                font-weight: bold;
+            }
+
+           
+
+            #nextbtn, #backbtn, #newbtn{
+                width: 25%;
+                font-size:20px;
+                margin-right: 5%;
+                position: relative;
+                
+            }
+
+            #backbtn, #newbtn{
+                display:none;
+            }
+
+            #family{
+                width:95%;
+                height:95%;
+            }
+
+            #about{
+                font-weight: bold;
+                font-size:40px;
+                color:rgb(7, 7, 89)
+            }
+
+            #story{ 
+                font-size: 18px;
+                border-radius: 20px;
+            }
+
+            #imgdiv{
+                position:relative;
+            }
+         
+        
+        </style>
+</head>
+
+    <body> 
+        <div class="header" style="width:100%; box-shadow:5px 5px 10px rgb(0, 0, 0); padding-bottom:10px;">
+            <img src="Logo.png" width="5%" style="float:left; margin-top:25px;" class="img-responsive">
+            <span> <img src="header.png" width="30%" height="100px" class="img-responsive"></span>
+        </div>
+         <br>
+        <br>
+        
+        <center>
+            <div>
+            <h2 id="about">UNDERSTANDING PHRASES and CLAUSES</h2>
+        </div>
+          
+         <div class="maindiv container-fluid" style="height:60%;">
+            <center>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-11 imgdiv">
+                <img id="family" src="2.jpg" style="width:100%;"> 
+            </div>
+            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-11" id='storydiv'>
+                <p id="story" style="text-align:left; width:100%;">
+              
+                    Today we are going to pay close attention to the groups of words that
+                    help us form sentences. <br>They are called <br>PHRASES and CLAUSES.</b>
+
+                </p> 
+            </div>
+        </center>
+        </div>
+        <br>
+        <button id="backbtn" onclick="backpic()" class="btn btn-success">Back</button>
+        <button id="nextbtn" onclick="update()" class="btn btn-success">Continue</button>
+        <button id="newbtn" onclick="newpage()" class="btn btn-success">Next</button>
+       
+       
+
+
+        </center>   
+
+        <script>
+
+            var images = ["Assests/1.jpg", "Assests/2.jpg", "Assests/3.jpg", "Assests/4.jpg", "Assests/5.jpg", "Assests/6.jpg", "Assests/7.jpg", "Assests/8.jpg", "Assests/9.jpg", "Assests/10.jpg", "Assests/11.jpg", "Assests/12.jpg"];
+            var para=["Long ago the kangaroo was grooming her joey on the bank of a brook. They liked to listen to the water burble as the mama combed her baby’s fur. On this day, an old wombat staggered toward them. <br> <br> “Oh dear,” the kangaroo whispered to her baby. “This wombat is old and sick. He must have great-great-grandchildren already.”",
+            
+                      "The mother kangaroo thought she heard the sound of weeping. As the wombat veered closer, she heard him say, “Useless and worthless, worthless and useless.” <br> <br> “What’s the trouble, friend wombat?” she asked. <br><br> “Huh?” he said, startled. “Who said that?”",
+                      
+                      "“I did,” said the kangaroo. “A kangaroo and her joey.” <br> <br> “I’m blind,” the wombat replied. “Nobody wants me around. Nobody thinks about me. I’m no good any more. They’ve abandoned me, all of them.”",
+                    
+                      "PQ:<br>1)What is a wombat? <br> Ans: an Australian mammal with strong, short legs that it uses for digging. <br> <br> 2)Where was the kangaroo grooming her joey? <br> Ans: On the bank of a brook. <br> <br> 3)TRUE and FALSE <br> Was the wombat, young, healthy and famous? <br> Ans: False. The wombat was old, sick and uncared for.",
+
+                      " Notice: <br><br> <i style='color:blue'>“Long ago”</i> and <i style='color:blue'>“on the bank of a brook”</i><br><br> They cannot stand alone.<br> <br> They only make sense when used with the part <br><i style='color:red'> “The kangaroo was grooming her joey”</i>",
+                      " The sentence has two parts, one part cannot make complete sense alone and the other part can make complete sense all alone.<br> The part which cannot stand alone is called a <i style='color:blue'> phrase</i> <br> and the part that can stand alone is called a <i style='color:blue'>clause</i>. Thus, “Long ago” and “on the bank of a brook” are called PHRASES <br>and<br> “The kangaroo was grooming her joey” is a CLAUSE. ",
+                      "The kangaroo, who had a tender heart, said, “It’s not as bad as all that. I’ll be your friend. My joey and I will show you where the tastiest grass grows.” She let the wombat hold her tail. Then, slowly, she led him over to the juiciest grass and cleanest water. The old wombat sighed with pleasure. It made the kangaroo happy to see him feeling better.",
+
+                      "Suddenly she remembered her joey! She had told him to stay close, but he had wandered off again. She raced back to look for him. So many times this has happened. She’d look for food, and when she looked up, he had wandered off. It scared her terribly.",
+
+                      "She found her joey asleep under a gum tree. Not wanting to wake him from his nap, she decided to go back and check on the old wombat. Something was moving in the bush. An Aboriginal hunter, silently stalking the wombat! Already his boomerang was raised above his head, its smooth edges ready to slice the air. The kangaroo froze. She couldn’t even breathe. She wanted to run, but the wombat was like her joey—she had to protect him!",
+
+                      "3)Who tried to hunt down the wombat? <br> Ans:An aboriginal hunter. <br><br> 4)What was the hunting weapon of the Aboriginal hunter?<br> Ans: A boomerang",
+
+                      "<i style='color:blue'>“She had told him to stay close” </i> makes complete sense on its own, is a sentence and thus it is the Principal Clause of the entire sentence. Principal Clauses are called Independent Clauses because they do not depend on anything to make complete sense on their own. <br> <br> However, <i style='color:blue'>“but he had wandered off again”</i> seems incomplete even though it has a subject verb combination “he-had wandered off”. It is clear that <i style='color:blue'>“but he had wandered off again”</i> needs <i style='color:blue'>“She had told him to stay close” </i> in order to make complete sense. Therefore, <i style='color:blue'>“but he had wandered off again”</i> is a Subordinate Clause.",
+
+                      "Subordinate Clauses are also called <u style=color:'red'>Dependent Clauses</u> because they depend on Principal Clauses. <br> If you observe carefully, you will see that subordinate Clauses add or complete the information given in the main clause. <br> The subordinate conjunction <i>“but”</i> at the beginning of <i>“he had wandered off again”</i> makes “but he had wandered off again” a subordinate clause, otherwise <i style=color:'red'>“he had wandered off again” makes complete sense and thus is a sentence.",
+                      "The kangaroo began to stomp on the branches and twigs under her feet. Thump, thump, crack, crack, she pounded the earth. The hunter turned toward her. “Run,” she screamed to the wombat, “Run, there’s a hunter.” The wombat took off crazily, not knowing where he was going. The hunter didn’t care. Now all he wanted was the kangaroo!",
+
+                      "She hopped as hard and fast as she could into the bush, away, away from where she had left her joey asleep. Her heart thumped wildly in her throat as she ran for her life. At last she came to a cave. She was too tired to go farther, and collapsed on the dirt floor inside. At least he would have to kill her in the cool dark, not out in the open where other animals would be forced to watch.",
+
+                      "The hunter ran past the mouth of the cave! The kangaroo stayed inside, listening for his return. She was afraid to go out. Finally, she saw him walk past the mouth of the cave again, his boomerang hanging from his hand. She waited until it was safe, then ran as fast as she could back to the gum tree. There was her joey, awake and ready to play. Together they went to look for the wombat, but he had gone.",
+
+                      "DISCUSSION:<br><br> 1)How did the kangaroo help the Wombat to escape from the hunter? <br> Ans: The kangaroo ignored her sleeping joey and focussed on the wombat when she saw that a hunter was stalking the wombat. The kangaroo stomped on the branches and twigs under her feet to redirect the hunter’s attention from the wombat towards herself so that the wombat could escape. When the hunter saw the kangaroo, she screamed to her - “run...run, there’s a hunter” to alert her about the hunter.<br><br>2)Where was the kangaroo hiding while the hunter searched for her?<br>Ans: Inside the cave.",
+                        "Subordinate Clauses are introduced in a sentence by a subordinate conjunction or a relative Pronoun. <br>Subordinate conjunctions are joining words that connect an independent and a dependent clause indicating a cause-and-effect relationship or a shift in time and space. <br>Relative Pronouns connect an independent clause to a relative clause. <br>Relative Pronouns provide details/information about the subject they relate to<br> Let us look at the sentence below for more clarity: <br><i style=color:'red'>After I found the jewellery box, I called you.<i><br> <u style=color:'blue'>After is a subordinate conjunction. <u style=color:'blue'>I called you<u> is the Principal/Dependent Clause <br><br> <i>The cars that I had bought previously, were all expensive.</i> <br><u style=color:'blue'>That is a relative Pronoun. <u style='color:blue'>The cars were all expensive<u> is the Principal Clause <br>",
+                      "What the kangaroo mother didn’t know was that the wombat wasn’t a wombat. He was actually the great god Byamee who had put on a disguise. Byamee had descended from the sky world to find out which of his creatures had the kindest heart. Now he had an answer that pleased him greatly: the kangaroo. Byamee wanted to give her the gift that would help her most of all. So he called the sky spirits together and said, “Go down below to where the eucalyptus grow tall. Peel the long strips of bark and make a dilly bag apron. Give it to the kangaroo mother and explain that she must tie it around her waist.”",
+
+                      "And so they did. At the very moment the kangaroo mother tied the apron around her waist, Byamee transformed it into soft kangaroo fur. It grew into her own flesh. Now she had a pouch in which to carry her baby joey. He could even sleep in there as she went about her daily tasks.<br><br> The kangaroo mother was very happy with her gift. But because she was the kindest creature of all, she didn’t want to keep it only for herself. She thought about the other kangaroo mothers and about the wallaby mothers and the kangaroo rats and all the other marsupials.<br><br> Byamee loved the kangaroo’s generous heart. So he decided to make pouches for all the other marsupial mothers. Ever since then, their babies almost never get lost.",
+
+                      "PQ: <br> <br> 1. Who was the wombat actually? <br> Ans: The wombat was actually the great god Byamee who had put on a disguise.<br><br> 2. Why did Byamee put on a disguise? <br> Ans: Byamee had descended from the sky world to find out which of his creatures had the kindest heart. He was now happy to find out that the kangaroo has the kindest heart. <br><br> 3. How was the kangaroo’s pouch made? <br> Ans: Byamee asked his sky spirits to go down below to where the eucalyptus grew tall and peel the long strips of bark and make a dilly bag apron. He also asked them to give it to the kangaroo mother and explain that she must tie it around her waist. "
+
+                    ]
+            
+            
+            var i = -1;
+            function update(){
+                i++
+                document.getElementById("backbtn").style.display="inline-block"
+                if(i > para.length-1){
+                    document.getElementById("nextbtn").style.display="none"
+                    document.getElementById("newbtn").style.display="inline-block"
+                    document.getElementById("family").src = "last.jpg";
+                    document.getElementById("story").style.fontSize="18px"
+                    document.getElementById("story").style.borderLeftStyle="solid"
+                    document.getElementById("story").style.borderLeftColor="rgb(164, 246, 229)"
+                    document.getElementById("about").innerHTML = "Let's discuss some examples from the story: ";
+                    document.getElementById("story").innerHTML = "<i> <i><br> ";
+                }
+                else{
+                    document.getElementById("story").style.fontSize="22px"
+                    document.getElementById("story").style.backgroundColor="white"
+                    document.getElementById("about").innerHTML="How the Kangaroo Got Her Pouch"
+                     var updated_image = images[i]; 
+                var newpara =para[i];
+                document.getElementById("family").src = updated_image;
+                document.getElementById("story").innerHTML = newpara;
+              
+            }
+            };
+
+            function newpage(){
+                window.location="ac2.html"
+            }
+
+            function backpic(){
+                i=i-1
+                console.log(i)
+
+                if(i<0){
+                    document.getElementById("story").style.fontSize="18px"
+                   // document.getElementById("story").style.backgroundColor="lightblue"
+                    document.getElementById("backbtn").style.display="none"
+                    document.getElementById("nextbtn").style.display="inline-block"
+                    document.getElementById("family").src = "2.jpg";
+                    document.getElementById("about").innerHTML="UNDERSTANDING PHRASES and CLAUSES"
+                    document.getElementById("story").innerHTML = 'Today we are going to pay close attention to the groups of words that help us form sentences. <br>They are called <br>PHRASES and CLAUSES.</b>';
+                }
+                else{
+                document.getElementById("story").style.fontSize="22px"
+                document.getElementById("story").style.backgroundColor="white"
+                document.getElementById("nextbtn").style.display="inline-block"
+                var updated_image = images[i]; 
+                var newpara =para[i];
+                document.getElementById("family").src = updated_image;
+                document.getElementById("story").innerHTML = newpara;
+                }
+            }
+
+    
+    </script>
+        
+    </body>
+</html>
